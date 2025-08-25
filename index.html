@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Cadastro</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Lado esquerdo com imagem -->
+    <div class="left">
+      <div class="overlay"></div>
+    </div>
+    
+    <!-- Lado direito com formulário -->
+    <div class="right">
+      <form class="form">
+        <h1>Cadastro</h1>
+
+        <label for="nome">Nome completo</label>
+        <input type="text" id="nome" placeholder="Digite seu nome" required>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="exemplo@email.com" required>
+
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" placeholder="Digite sua senha" required>
+
+        <label for="nascimento">Data de nascimento</label>
+        <input type="date" id="nascimento" required>
+
+        <label for="genero">Gênero</label>
+        <select id="genero" required>
+          <option value="">Selecione</option>
+          <option value="masculino">Masculino</option>
+          <option value="feminino">Feminino</option>
+          <option value="outro">Outro</option>
+        </select>
+
+        <label>Interesses</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox"> Tecnologia</label>
+          <label><input type="checkbox"> Música</label>
+          <label><input type="checkbox"> Esportes</label>
+        </div>
+
+        <label>Receber novidades?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="novidades"> Sim</label>
+          <label><input type="radio" name="novidades"> Não</label>
+        </div>
+
+        <button type="submit">Cadastrar</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

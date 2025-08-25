@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Esquerda - imagem com blur */
+
+.left {
+  flex: 1;
+  background: url("../img/image.png") center center no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #222; /* fallback caso a imagem não preencha tudo */
+  position: relative;
+}
+
+.left .overlay {
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(3px); /* Efeito blur */
+  background: rgba(121, 168, 215, 0.3); /* escurece um pouco */
+}
+
+/* Direita - formulário */
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8f9fd;
+  padding: 40px;
+}
+
+.form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+.form h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  color: #444;
+  font-weight: bold;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus,
+select:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 5px #2575fc;
+}
+
+.checkbox-group,
+.radio-group {
+  margin-top: 10px;
+}
+
+.checkbox-group label,
+.radio-group label {
+  display: block;
+  margin-top: 5px;
+  font-weight: normal;
+  color: #333;
+}
+
+button {
+  margin-top: 20px;
+  background: #2575fc;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1e5fd8;
+}
