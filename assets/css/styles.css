@@ -121,7 +121,9 @@ button {
     font: inherit;
 }
 
-input,
+/* Campos de entrada de texto/select ocupam 100% da largura,
+   mas NÃO aplicar para checkbox/radio */
+input:not([type="checkbox"]):not([type="radio"]),
 select {
     width: 100%;
     padding: var(--space-3) var(--space-4);
@@ -172,6 +174,13 @@ select:focus-visible {
 
 .option input {
     accent-color: var(--color-primary);
+}
+
+/* Garante que checkbox/radio não ocupem a linha inteira */
+.option input[type="checkbox"],
+.option input[type="radio"] {
+    width: auto;
+    height: auto;
 }
 
 /* Botões */
