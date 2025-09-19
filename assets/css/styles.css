@@ -57,17 +57,25 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Layout principal */
+/* Layout principal (Flexbox) */
 .layout {
     min-height: 100dvh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 /* Área visual com imagem */
 .hero {
     position: relative;
     background: url("../img/image.png") center center / cover no-repeat, #222;
+}
+
+/* Colunas 50/50 no desktop (Flexbox) */
+.hero,
+.content {
+    flex: 1 1 50%;
+    min-width: 0;
+    /* permite que o conteúdo encolha sem causar overflow */
 }
 
 .hero__overlay {
@@ -79,8 +87,9 @@ body {
 
 /* Conteúdo (formulário) */
 .content {
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: var(--space-10);
     background: var(--color-bg);
 }
@@ -102,12 +111,14 @@ body {
 
 /* Formulário */
 .form {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: var(--space-4);
 }
 
 .form__field {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: var(--space-2);
 }
 
@@ -160,7 +171,8 @@ select:focus-visible {
 
 .form__options {
     margin-top: var(--space-2);
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: var(--space-2);
 }
 
@@ -222,7 +234,7 @@ select:focus-visible {
 /* Responsividade */
 @media (max-width: 960px) {
     .layout {
-        grid-template-columns: 1fr;
+        flex-direction: column;
     }
 
     .hero {

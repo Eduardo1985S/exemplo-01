@@ -1,6 +1,6 @@
 # Formulário de Cadastro — exemplo-01
 
-Formulário de cadastro profissional e acessível, feito com HTML semântico e CSS moderno (variáveis, grid e responsividade).
+Formulário de cadastro profissional e acessível, feito com HTML semântico e CSS moderno (variáveis, Flexbox e responsividade).
 
 ## Como usar
 
@@ -26,8 +26,9 @@ exemplo-01/
 
 - HTML semântico: `<main>`, `<section>`, `<aside>`, `fieldset`/`legend`
 - Acessibilidade: labels conectados, foco visível (`:focus-visible`), `prefers-reduced-motion`
-- Layout: grid 2 colunas (hero + formulário) e empilhamento em telas menores
+- Layout: 2 colunas com Flexbox (hero + formulário) e empilhamento em telas menores
 - CSS limpo: variáveis para cores/spacing/tipografia, componentes reutilizáveis
+- Desktop sem scroll: página ocupa 100svh sem scroll interno no formulário
 
 ## Personalização
 
